@@ -33,7 +33,7 @@ if st.button("Ask") and query:
             else:
                 data = response.json()
 
-                st.subheader("✅ Answer")
+                st.subheader("Answer")
 
                 st.markdown(f"""
                 <div class="answer-box">
@@ -42,4 +42,4 @@ if st.button("Ask") and query:
                 """, unsafe_allow_html=True)
 
         except Exception as e:
-            st.error(f"❌ Error: {str(e)}")
+            st.error(f"Error: {str(e)}")
