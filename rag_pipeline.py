@@ -35,7 +35,6 @@ Question:
 Answer:
 """
 
-    # ✅ FINAL FIX: Docker + Ollama connection
     llm = Ollama(
         model="tinyllama",
         base_url="http://host.docker.internal:11434"
