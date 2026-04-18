@@ -16,7 +16,7 @@ def ingest_documents():
             documents.extend(loader.load())
 
     if not documents:
-        print("❌ No PDF found in data folder")
+        print("No PDF found in data folder")
         return
 
     splitter = RecursiveCharacterTextSplitter(
@@ -33,7 +33,7 @@ def ingest_documents():
     db = FAISS.from_documents(docs, embeddings)
     db.save_local(DB_PATH)
 
-    print("✅ Ingestion complete!")
+    print("Ingestion complete!")
 
 if __name__ == "__main__":
     ingest_documents()
